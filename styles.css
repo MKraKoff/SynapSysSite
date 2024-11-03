@@ -1,0 +1,245 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: #fff;
+  background-color: #000;
+}
+
+section {
+  padding: 0 5%;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 5%;
+  background-color: #fff;
+}
+
+header .logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #000;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: #000;
+  font-size: 16px;
+}
+
+.intro {
+  position: relative;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  height: 80vh;
+  background-image: url("https://sercenabanacha.org.pl/wp-content/uploads/2022/08/176597_r2_940.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+  text-align: left;
+}
+
+.intro::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Adjust the opacity to control the overlay darkness */
+  z-index: 1;
+}
+
+.intro-content {
+  position: relative;
+  max-width: 600px;
+  text-align: left;
+  z-index: 2;
+  /* Ensures the content appears above the overlay */
+}
+
+.intro h1 {
+  font-size: 50px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.intro p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #fff;
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.solution,
+.algorithm {
+  padding: 100px 5%;
+  text-align: center;
+  color: #000;
+}
+
+.solution {
+  background-color: #f9f9f9;
+}
+
+.algorithm {
+  background-color: #fff;
+}
+
+.solution h2,
+.algorithm h2 {
+  font-size: 50px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.solution p,
+.algorithm p {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 40px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.solution-cards,
+.algorithm-cards {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+}
+
+.solution-card,
+.algorithm-card {
+  padding: 20px;
+  flex: 1 1 30%;
+  min-width: 280px;
+  max-width: 30%;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.solution-icon,
+.algorithm-icon {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.solution-card h3,
+.algorithm-card h3 {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #000;
+}
+
+.solution-card p,
+.algorithm-card p {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.solution .button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #000;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+
+.benefits {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px 5%;
+  gap: 75px;
+  background-color: #f9f9f9;
+  color: #000;
+}
+
+.benefits-content {
+  flex: 1;
+  max-width: 50%;
+  padding-right: 20px;
+}
+
+.benefits-header p {
+  margin: 20px 0 100px 0;
+  font-size: 20px;
+}
+
+.benefits h2 {
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.benefits p {
+  color: #333;
+}
+
+.benefits-items {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.benefits-item {
+  flex: 1;
+}
+
+.benefits-item h3 {
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #000;
+}
+
+.benefits-item p {
+  font-size: 18px;
+  color: #333;
+}
+
+.benefits-image {
+  flex: 1;
+  max-width: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+.benefits-image img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
+}
