@@ -191,10 +191,20 @@
       <div class="team-info">
         <h2>Nasz zespół</h2>
         <p>
-          Historia zespołu: poznaliśmy się na Econverse Cup Poznań, znamy się
-          tyle lat, jesteśmy zgrani, ambitni. Lorem ipsum dolor sit amet,
-          consectetur adipiscing elit. Suspendisse varius enim in eros elementum
-          tristique.
+          Nasz zespół powstał po zakończeniu kwalifikacji Econverse Cup w
+          Poznaniu. Jesteśmy zgranym zespołem, znamy się od dłuższego czasu oraz
+          współpracujemy nad aktualnym projektem wspólnie dopełniając się w
+          umiejętnościach. Mikołaj jako Founder i twórca pomysłu, odpowiada za
+          organizację pracy, koordynację spotkań oraz szukanie finansowań.
+          Mikita jako Co-Funder zajmuje się głównie tworzeniem wersji Beta
+          naszego oprogramowania oraz techniczną stroną projektu czyli
+          programowaniem, dopełniając ważną informatyczną część naszego zespołu.
+          Dawid jako Co-Funder odpowiada za graficzną oraz estetyczną oprawę
+          naszego oprogramowania. Również obszerna wiedza Dawida w zakresie
+          finansów oraz biznesu pomaga naszemu projektowi stawić czoła wyzwaniom
+          nowego startupu. Podsumowując nasz zespół jest silną grupą ludzi o
+          tych samych celach i ambicjach którzy dopełniają się w wielu ważnych
+          cechach potrzebnych do utworzenia poważnego startupu.
         </p>
       </div>
 
@@ -209,7 +219,10 @@
           <div class="member-info">
             <h3>Dawid Rutkowski</h3>
             <p>Co-Founder</p>
-            <p>UI/UX, no-code developer and Econverse.org Ambassador</p>
+            <p>
+              Founder & Creative Lead at Rutkowski Films & Marketing /
+              Ambassador at Econverse.org
+            </p>
             <div class="social-icons">
               <a href="https://www.linkedin.com/in/dawid-rutkowski-b3b8b1301/"
                 ><i class="fab fa-linkedin"></i
@@ -228,7 +241,10 @@
           <div class="member-info">
             <h3>Mikołaj Mikołajczak</h3>
             <p>Founder</p>
-            <p>Founder of SynapSysHealth and MedTech specialist</p>
+            <p>
+              Founder of SynapSys Health / Young entrepreneur / Medicine
+              passionate
+            </p>
             <div class="social-icons">
               <a
                 href="https://www.linkedin.com/in/miko%C5%82aj-miko%C5%82ajczak-2a49b1318/"
@@ -248,7 +264,10 @@
           <div class="member-info">
             <h3>Mikita Shylai</h3>
             <p>Co-Founder</p>
-            <p>Programist, developer. Idea development.</p>
+            <p>
+              Youth Entrepreneur / Co-Founder of SynapSys Health / Programmer
+              (C, C#, Python, HTML/CSS)
+            </p>
             <div class="social-icons">
               <a href="https://www.linkedin.com/in/mikita-shylai-40719b286/"
                 ><i class="fab fa-linkedin"></i
@@ -413,7 +432,9 @@
         <div class="contact-item">
           <h3><i class="fab fa-instagram"></i>Instagram</h3>
           <p>Postujemy wiadomości. Zaobserwuj!</p>
-          <a href="#" target="_blank">@relume</a>
+          <a href="https://www.instagram.com/synapsys_health/" target="_blank"
+            >@synapsys_health</a
+          >
         </div>
 
         <!-- <div class="contact-item">
@@ -439,7 +460,9 @@
         </nav>
         <div class="social-icons">
           <a href="#"><i class="fab fa-facebook-f"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.instagram.com/synapsys_health/"
+            ><i class="fab fa-instagram"></i
+          ></a>
           <a href="#"><i class="fab fa-twitter"></i></a>
           <a href="#"><i class="fab fa-linkedin-in"></i></a>
           <a href="#"><i class="fab fa-youtube"></i></a>
@@ -458,6 +481,17 @@
 </html>
 
 <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const burger = document.querySelector(".burger");
+    const navLinks = document.querySelector(".nav-links");
+
+    burger.addEventListener("click", function () {
+      navLinks.classList.toggle("show");
+      burger.classList.toggle("toggle"); // Dodanie animacji burgera
+    });
+  });
+
+  // Slider functionality (jeśli nadal jest potrzebny)
   let currentIndex = 0;
   const slides = document.querySelectorAll(".slide");
   const dots = document.querySelectorAll(".dot");
@@ -491,14 +525,4 @@
 
   // Initial slide
   showSlide(currentIndex);
-
-  document.addEventListener("DOMContentLoaded", function () {
-    const burger = document.querySelector(".burger");
-    const navLinks = document.querySelector(".nav-links");
-
-    burger.addEventListener("click", function () {
-      navLinks.classList.toggle("show");
-      burger.classList.toggle("toggle"); // Dodanie animacji burgera
-    });
-  });
 </script>

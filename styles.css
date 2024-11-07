@@ -46,20 +46,37 @@ header nav ul li a {
   font-size: 16px;
 }
 
-/* Burger Icon Styling */
 .burger {
-    display: none; /* Hidden on larger screens */
-    flex-direction: column;
-    cursor: pointer;
-    gap: 4px;
+  display: none;
+  /* Hidden on larger screens */
+  flex-direction: column;
+  cursor: pointer;
+  gap: 4px;
+  position: relative; /* Added for positioning spans */
+  width: 25px; /* Fixed width for better control */
+  height: 20px; /* Fixed height to position spans */
 }
 
 .burger span {
-    display: block;
-    width: 25px;
-    height: 3px;
-    background-color: #fff;
-    transition: 0.3s;
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: #fff;
+  transition: all 0.3s ease;
+  position: absolute; /* Enable top positioning */
+  left: 0;
+}
+
+.burger span:nth-child(1) {
+  top: 0;
+}
+
+.burger span:nth-child(2) {
+  top: 8.5px;
+}
+
+.burger span:nth-child(3) {
+  top: 17px;
 }
 
 .intro {
@@ -521,12 +538,12 @@ header nav ul li a {
 }
 
 .filled-button:hover {
-  background-color: #004a99;
+  background-color: #0056b3;
 }
 
 .outlined-button:hover {
-  background-color: #003670;
-  border: 2px solid #00346b;
+  background-color: #0056b3;
+  border: 2px solid #0056b3;
   color: #fff;
 }
 
@@ -610,7 +627,7 @@ header nav ul li a {
 }
 
 .contact-item a:hover {
-  color: #555;
+  color: #0056b3;
 }
 
 
@@ -661,8 +678,7 @@ header nav ul li a {
 }
 
 .social-icons a:hover {
-  color: #000;
-  /* Darken on hover */
+  color: #0056b3;
 }
 
 .footer-bottom {
@@ -683,7 +699,7 @@ header nav ul li a {
 }
 
 .footer-links a {
-  color: #333;
+  color: #0056b3;
   text-decoration: none;
 }
 
@@ -733,6 +749,7 @@ header nav ul li a {
 
 @media (max-width: 768px) {
 
+  /* Header Navigation */
   nav ul.nav-links {
     display: none;
     position: absolute;
@@ -761,14 +778,15 @@ header nav ul li a {
 
   /* Ensure nav-links links have dark color */
   nav ul.nav-links li a {
-    color: #000000; /* Dark color for visibility on white background */
+    color: #000000;
+    /* Dark color for visibility on white background */
     font-size: 18px;
   }
 
   /* Burger Animation to Perfect Cross */
   .burger.toggle span:nth-child(1) {
     transform: rotate(45deg);
-    top: 8.5px;
+    top: 8.5px; /* Adjusted to overlap perfectly */
   }
 
   .burger.toggle span:nth-child(2) {
@@ -777,15 +795,14 @@ header nav ul li a {
 
   .burger.toggle span:nth-child(3) {
     transform: rotate(-45deg);
-    top: 8.5px;
+    top: 8.5px; /* Adjusted to overlap perfectly */
   }
 
   /* Optional: Change burger bar colors on toggle */
   .burger.toggle span {
-    background-color: #ffffff;
+    background-color: #ffffff; /* Changed to dark color for visibility */
   }
 
-  
   .slide {
     flex-direction: column;
     align-items: center;
@@ -822,13 +839,16 @@ header nav ul li a {
   }
 
   .demo {
-    flex-direction: column; /* Stack content vertically */
+    flex-direction: column;
+    /* Stack content vertically */
   }
 
   .demo-image {
-    order: 2; /* Move image to the bottom */
+    order: 2;
+    /* Move image to the bottom */
     max-width: 100%;
-    margin-top: 20px; /* Optional: add space above the image */
+    margin-top: 20px;
+    /* Optional: add space above the image */
   }
 
   .demo-content {
@@ -836,6 +856,102 @@ header nav ul li a {
     max-width: 100%;
     padding-right: 0;
   }
-  
+
+  /* Intro Section */
+  .intro h1 {
+    font-size: 28px;
+  }
+
+  .intro p {
+    font-size: 16px;
+  }
+
+  .button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  /* Solution and Algorithm Sections */
+  .solution h2,
+  .algorithm h2 {
+    font-size: 32px;
+  }
+
+  .solution p,
+  .algorithm p,
+  .solution-card p,
+  .algorithm-card p {
+    font-size: 14px;
+  }
+
+  .solution-card h3,
+  .algorithm-card h3 {
+    font-size: 18px;
+  }
+
+  /* Benefits Section */
+  .benefits h2 {
+    font-size: 28px;
+  }
+
+  .benefits p,
+  .benefits-item p {
+    font-size: 14px;
+  }
+
+  .benefits-item h3 {
+    font-size: 18px;
+  }
+
+  /* Team Section */
+  .team h2 {
+    font-size: 28px;
+  }
+
+  .team p,
+  .member-info p {
+    font-size: 14px;
+  }
+
+  .team .member-info h3 {
+    font-size: 18px;
+  }
+
+  /* Contact Section */
+  .contact h2 {
+    font-size: 28px;
+  }
+
+  .contact p,
+  .contact-item p {
+    font-size: 14px;
+  }
+
+  .contact-item h3 {
+    font-size: 18px;
+  }
+
+  /* Footer */
+  .footer p,
+  .footer-links a {
+    font-size: 12px;
+  }
+
+  /* Footer nav links */
+  .footer-nav ul li a {
+    font-size: 14px;
+  }
+
+  /* Burger Menu */
+  .nav-links {
+    display: none;
+    /* Hide menu initially */
+  }
+
+  .nav-links.show {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
 
 }
