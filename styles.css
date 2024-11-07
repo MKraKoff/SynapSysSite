@@ -52,9 +52,12 @@ header nav ul li a {
   flex-direction: column;
   cursor: pointer;
   gap: 4px;
-  position: relative; /* Added for positioning spans */
-  width: 25px; /* Fixed width for better control */
-  height: 20px; /* Fixed height to position spans */
+  position: relative;
+  /* Added for positioning spans */
+  width: 25px;
+  /* Fixed width for better control */
+  height: 20px;
+  /* Fixed height to position spans */
 }
 
 .burger span {
@@ -63,7 +66,8 @@ header nav ul li a {
   height: 3px;
   background-color: #fff;
   transition: all 0.3s ease;
-  position: absolute; /* Enable top positioning */
+  position: absolute;
+  /* Enable top positioning */
   left: 0;
 }
 
@@ -763,7 +767,8 @@ header nav ul li a {
     gap: 15px;
     padding: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    z-index: 1000; /* Ensure menu appears above other elements */
+    z-index: 1000;
+    /* Ensure menu appears above other elements */
   }
 
   /* Show nav-links when 'show' class is added */
@@ -786,7 +791,8 @@ header nav ul li a {
   /* Burger Animation to Perfect Cross */
   .burger.toggle span:nth-child(1) {
     transform: rotate(45deg);
-    top: 8.5px; /* Adjusted to overlap perfectly */
+    top: 8.5px;
+    /* Adjusted to overlap perfectly */
   }
 
   .burger.toggle span:nth-child(2) {
@@ -795,12 +801,14 @@ header nav ul li a {
 
   .burger.toggle span:nth-child(3) {
     transform: rotate(-45deg);
-    top: 8.5px; /* Adjusted to overlap perfectly */
+    top: 8.5px;
+    /* Adjusted to overlap perfectly */
   }
 
   /* Optional: Change burger bar colors on toggle */
   .burger.toggle span {
-    background-color: #ffffff; /* Changed to dark color for visibility */
+    background-color: #ffffff;
+    /* Changed to dark color for visibility */
   }
 
   .slide {
@@ -857,6 +865,10 @@ header nav ul li a {
     padding-right: 0;
   }
 
+  .demo h2 {
+    font-size: 28px;
+  }
+
   /* Intro Section */
   .intro h1 {
     font-size: 28px;
@@ -874,7 +886,7 @@ header nav ul li a {
   /* Solution and Algorithm Sections */
   .solution h2,
   .algorithm h2 {
-    font-size: 32px;
+    font-size: 28px;
   }
 
   .solution p,
