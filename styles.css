@@ -16,8 +16,8 @@ section {
 
 header {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   padding: 10px 5%;
   background-color: #0056b3;
 }
@@ -46,6 +46,22 @@ header nav ul li a {
   font-size: 16px;
 }
 
+/* Burger Icon Styling */
+.burger {
+    display: none; /* Hidden on larger screens */
+    flex-direction: column;
+    cursor: pointer;
+    gap: 4px;
+}
+
+.burger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    transition: 0.3s;
+}
+
 .intro {
   position: relative;
   display: flex;
@@ -54,7 +70,7 @@ header nav ul li a {
   height: 80vh;
   background-image: url("https://sercenabanacha.org.pl/wp-content/uploads/2022/08/176597_r2_940.jpg");
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: cover;
   background-position: center;
   text-align: left;
 }
@@ -716,6 +732,60 @@ header nav ul li a {
 }
 
 @media (max-width: 768px) {
+
+  nav ul.nav-links {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 5%;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 200px;
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000; /* Ensure menu appears above other elements */
+  }
+
+  /* Show nav-links when 'show' class is added */
+  nav ul.nav-links.show {
+    display: flex;
+  }
+
+  /* Show burger icon */
+  .burger {
+    display: flex;
+  }
+
+  /* Ensure nav-links links have dark color */
+  nav ul.nav-links li a {
+    color: #000000; /* Dark color for visibility on white background */
+    font-size: 18px;
+  }
+
+  /* Burger Animation to Perfect Cross */
+  .burger.toggle span:nth-child(1) {
+    transform: rotate(45deg);
+    top: 8.5px;
+  }
+
+  .burger.toggle span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .burger.toggle span:nth-child(3) {
+    transform: rotate(-45deg);
+    top: 8.5px;
+  }
+
+  /* Optional: Change burger bar colors on toggle */
+  .burger.toggle span {
+    background-color: #ffffff;
+  }
+
+  
   .slide {
     flex-direction: column;
     align-items: center;
@@ -726,4 +796,46 @@ header nav ul li a {
     /* Full width on mobile */
     max-width: 80%;
   }
+
+  .benefits {
+    flex-direction: column;
+    /* Stack content vertically */
+  }
+
+  .benefits-image {
+    order: 2;
+    /* Move image to the bottom */
+    max-width: 100%;
+    margin-top: 20px;
+    /* Optional: add space above the image */
+  }
+
+  .benefits-content {
+    order: 1;
+    max-width: 100%;
+    padding-right: 0;
+  }
+
+  .team {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .demo {
+    flex-direction: column; /* Stack content vertically */
+  }
+
+  .demo-image {
+    order: 2; /* Move image to the bottom */
+    max-width: 100%;
+    margin-top: 20px; /* Optional: add space above the image */
+  }
+
+  .demo-content {
+    order: 1;
+    max-width: 100%;
+    padding-right: 0;
+  }
+  
+
 }

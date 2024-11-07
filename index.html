@@ -17,12 +17,17 @@
         <img src="logo.png" alt="Company Logo" />
       </div>
       <nav>
-        <ul>
-          <li><a href="#solutions">Rozwiązania Medyczne</a></li>
-          <li><a href="#about">O Nas</a></li>
+        <ul class="nav-links">
+          <li><a href="#solution">Rozwiązania Medyczne</a></li>
+          <li><a href="#team">O Nas</a></li>
           <li><a href="#contact">Kontakt</a></li>
         </ul>
       </nav>
+      <div class="burger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </header>
 
     <!-- Intro Section -->
@@ -212,7 +217,7 @@
         <div class="team-member">
           <div class="member-image">
             <img
-              src="https://media.licdn.com/dms/image/v2/D4D03AQGVewH8Kkda4Q/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1720557597565?e=1736380800&v=beta&t=RUdOKWDZx79DoXhWmUse-Ryt694zvFsN_8pupCL_qxM"
+              src="https://media.licdn.com/dms/image/v2/D4D03AQF1gdGutaiR-w/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1730761853228?e=1736380800&v=beta&t=bDXEpQ-E1UlBydvo32X3A2WkPhFCJOHv4h6r5OTvIrE"
               alt="Mikołaj Mikołajczak"
             />
           </div>
@@ -480,4 +485,14 @@
 
   // Initial slide
   showSlide(currentIndex);
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const burger = document.querySelector(".burger");
+    const navLinks = document.querySelector(".nav-links");
+
+    burger.addEventListener("click", function () {
+      navLinks.classList.toggle("show");
+      burger.classList.toggle("toggle"); // Dodanie animacji burgera
+    });
+  });
 </script>
