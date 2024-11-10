@@ -9,17 +9,37 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
   </head>
+
+  <!-- Google tag (gtag.js) -->
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-NQJ3LF646Z"
+  ></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "G-NQJ3LF646Z");
+  </script>
+
   <body>
     <!-- Header -->
     <header>
       <div class="logo">
-        <img src="logo.png" alt="Company Logo" />
+        <a href="www.synapsyshealth.com"><img src="img/white-logo.png" alt="Company Logo" /></a>
       </div>
       <nav>
         <ul class="nav-links">
           <li><a href="#solution">Rozwiązanie</a></li>
           <li><a href="#team">O Nas</a></li>
+          <li><a href="#demo">Demo</a></li>
           <li><a href="#contact">Kontakt</a></li>
         </ul>
       </nav>
@@ -40,7 +60,7 @@
           czas oczekiwania i odciąża ratowników medycznych na Szpitalnych
           Oddziałach Ratunkowych
         </p>
-        <a href="#solution" class="button">Dowiedz się</a>
+        <a href="#solution" class="button" id="intro-button">Dowiedz się</a>
       </div>
     </section>
 
@@ -179,10 +199,7 @@
         </div>
       </div>
       <div class="benefits-image">
-        <img
-          src="https://img.freepik.com/free-photo/covid-19-coronavirus-outbreak-healthcare-workers-pandemic-concept-excited-happy-male-doctor-telling-great-news-raising-hands-up-smiling-thrilled-reacting-awesome-promo_1258-57452.jpg?semt=ais_hybrid"
-          alt="Benefits Image"
-        />
+        <img src="img/doctor.jpg" alt="Benefits Image" />
       </div>
     </section>
 
@@ -211,32 +228,7 @@
       <div class="team-members">
         <div class="team-member">
           <div class="member-image">
-            <img
-              src="https://media.licdn.com/dms/image/v2/D4D35AQFxY_faGiLrsA/profile-framedphoto-shrink_200_200/profile-framedphoto-shrink_200_200/0/1719448891657?e=1731258000&v=beta&t=Guh39DE_0YjYu0g3GnMmEg8EPkazIOwrPBAfkQLXAEY"
-              alt="Dawid Rutkowski"
-            />
-          </div>
-          <div class="member-info">
-            <h3>Dawid Rutkowski</h3>
-            <p>Co-Founder</p>
-            <p>
-              Founder & Creative Lead at Rutkowski Films & Marketing /
-              Ambassador at Econverse.org
-            </p>
-            <div class="social-icons">
-              <a href="https://www.linkedin.com/in/dawid-rutkowski-b3b8b1301/"
-                ><i class="fab fa-linkedin"></i
-              ></a>
-            </div>
-          </div>
-        </div>
-
-        <div class="team-member">
-          <div class="member-image">
-            <img
-              src="https://media.licdn.com/dms/image/v2/D4D03AQF1gdGutaiR-w/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1730761853228?e=1736380800&v=beta&t=bDXEpQ-E1UlBydvo32X3A2WkPhFCJOHv4h6r5OTvIrE"
-              alt="Mikołaj Mikołajczak"
-            />
+            <img src="img/photo/mikolaj.jpg" alt="Mikołaj Mikołajczak" />
           </div>
           <div class="member-info">
             <h3>Mikołaj Mikołajczak</h3>
@@ -256,10 +248,7 @@
 
         <div class="team-member">
           <div class="member-image">
-            <img
-              src="https://media.licdn.com/dms/image/v2/D4D03AQGnG9aGJOqBtQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1729587524350?e=1736380800&v=beta&t=C_K8ClKutrI-mBWe-pK1bjGuWJ83KFpriNE0lugEPY0"
-              alt="Mikita Shylai"
-            />
+            <img src="img/photo/mikita.jpg" alt="Mikita Shylai" />
           </div>
           <div class="member-info">
             <h3>Mikita Shylai</h3>
@@ -270,6 +259,25 @@
             </p>
             <div class="social-icons">
               <a href="https://www.linkedin.com/in/mikita-shylai-40719b286/"
+                ><i class="fab fa-linkedin"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="team-member">
+          <div class="member-image">
+            <img src="img/photo/dawid.jpg" alt="Dawid Rutkowski" />
+          </div>
+          <div class="member-info">
+            <h3>Dawid Rutkowski</h3>
+            <p>Co-Founder</p>
+            <p>
+              Founder & Creative Lead at Rutkowski Films & Marketing /
+              Ambassador at Econverse.org
+            </p>
+            <div class="social-icons">
+              <a href="https://www.linkedin.com/in/dawid-rutkowski-b3b8b1301/"
                 ><i class="fab fa-linkedin"></i
               ></a>
             </div>
@@ -395,17 +403,16 @@
           akcji? Skontaktuj się z nami!
         </p>
         <div class="buttons">
-          <a href="#"><button class="filled-button">Otwórz</button></a>
+          <a href="https://krakoff.pythonanywhere.com/" target=”_blank”
+            ><button class="button">Otwórz</button></a
+          >
           <a href="#contact"
             ><button class="outlined-button">Kontakt</button></a
           >
         </div>
       </div>
       <div class="demo-image">
-        <img
-          src="https://www.consultcra.com/wp-content/uploads/2021/04/Patient-Check-In-Systems.jpg"
-          alt="Demo Image"
-        />
+        <img src="img/tablet.jpg" alt="Demo Image" />
       </div>
     </section>
 
@@ -449,12 +456,13 @@
     <footer class="footer">
       <div class="footer-top">
         <div class="logo">
-          <img src="logo.png" alt="Company Logo" />
+          <a href="www.synapsyshealth.com"><img src="img/black-logo.png" alt="Company Logo" /></a>
         </div>
         <nav class="footer-nav">
           <ul>
             <li><a href="#solution">Rozwiązanie</a></li>
             <li><a href="#team">O Nas</a></li>
+            <li><a href="#demo">Demo</a></li>
             <li><a href="#contact">Kontakt</a></li>
           </ul>
         </nav>
