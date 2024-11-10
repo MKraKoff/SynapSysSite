@@ -23,7 +23,15 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 10px 5%;
-  background-color: #0056b3;
+  background-color: transparent;
+  /* Makes header transparent */
+  position: absolute;
+  /* Positions header on top of intro */
+  top: 0;
+  width: 100%;
+  /* Full width */
+  z-index: 10;
+  /* Ensures header is on top */
 }
 
 header .logo {
@@ -100,7 +108,7 @@ header nav ul li a:hover {
   display: flex;
   justify-content: left;
   align-items: center;
-  height: 95vh;
+  height: 100vh;
   background-image: url("img/sor.png");
   background-repeat: no-repeat;
   background-size: cover;
@@ -345,8 +353,8 @@ header nav ul li a:hover {
 }
 
 .member-image img {
-  width: 150px;
-  height: 150px;
+  width: 200px;
+  height: 200px;
   border-radius: 8px;
   object-fit: cover;
 }
@@ -831,7 +839,12 @@ header nav ul li a:hover {
 
   .benefits {
     flex-direction: column;
+    gap: 25px;
     /* Stack content vertically */
+  }
+
+  .benefits p {
+    margin-bottom: 30px;
   }
 
   .benefits-image {
@@ -851,10 +864,12 @@ header nav ul li a:hover {
   .team {
     flex-direction: column;
     align-items: center;
+    gap: 25px;
   }
 
   .demo {
     flex-direction: column;
+    gap: 25px;
     /* Stack content vertically */
   }
 
@@ -885,7 +900,8 @@ header nav ul li a:hover {
     font-size: 16px;
   }
 
-  .button {
+  .button,
+  .outlined-button {
     font-size: 14px;
     padding: 8px 16px;
   }
@@ -894,6 +910,12 @@ header nav ul li a:hover {
   .solution h2,
   .algorithm h2 {
     font-size: 28px;
+  }
+
+  .algorithm-icon,
+  .solution-icon {
+    font-size: 40px;
+    margin-bottom: 5px;
   }
 
   .solution p,
