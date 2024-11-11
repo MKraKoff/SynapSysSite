@@ -22,7 +22,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 5%;
+  padding: 25px 5%;
   background-color: transparent;
   /* Makes header transparent */
   position: absolute;
@@ -35,13 +35,14 @@ header {
 }
 
 header .logo {
+  margin-top: 1px;
   font-size: 24px;
   font-weight: bold;
   color: #000;
 }
 
 .logo img {
-  height: 50px;
+  height: 110px;
   /* Adjust as needed */
   width: auto;
 }
@@ -55,7 +56,7 @@ header nav ul {
 header nav ul li a {
   text-decoration: none;
   color: #ffffff;
-  font-size: 16px;
+  font-size: 24px;
   font-weight: bold;
   transition: background-color 0.3s, color 0.3s;
 
@@ -803,6 +804,11 @@ header nav ul li a:hover {
     font-size: 18px;
   }
 
+
+  .logo img {
+    height: 60px;
+  }
+
   /* Burger Animation to Perfect Cross */
   .burger.toggle span:nth-child(1) {
     transform: rotate(45deg);
@@ -865,6 +871,13 @@ header nav ul li a:hover {
     flex-direction: column;
     align-items: center;
     gap: 25px;
+  }
+
+  .member-image img {
+    width: 150px;
+    height: 150px;
+    border-radius: 8px;
+    object-fit: cover;
   }
 
   .demo {
